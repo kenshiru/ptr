@@ -1,0 +1,11 @@
+{% if error %}
+    <div style="background: #ff0000">{{error}}</div>
+{% endif %}
+
+<form method="POST" url="/">
+    <input type="number" name="bin" value="{{card_bin or ''}}" placeholder="555555... type card BIN">
+</form>
+
+{% if bin_info %}
+    {{bin_info}}
+{% endif %}
